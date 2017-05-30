@@ -29,3 +29,8 @@ To run tests in Node:
 ```js
 npm test
 ```
+
+
+# Questions
+
+whats the differecne between exporting in the class declaration or as default.
