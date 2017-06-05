@@ -1,0 +1,16 @@
+.card-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.container a {
+  height: 30px;
+}
