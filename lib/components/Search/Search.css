@@ -4,13 +4,23 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  padding: 70px 40px 0;
   /*align-items: center;*/
 }
 
 .search-bar {
 flex-grow: 8;
+height: 40px;
 }
 
-.search-button {
-flex-grow: 2;
+.submit-button {
+height: 40px;
+width: 60px;
+border-radius: 25px;
+margin-left: 20px;
+background-color: white;
+}
+
+.submit-button:hover {
+  background-color: #C8E7F0;
 }

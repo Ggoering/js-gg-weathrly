@@ -19,3 +19,7 @@
 .active-tab {
   font-weight: bold;
 }
+
+.tab-btns a:hover {
+  color: #001B8E
+}
