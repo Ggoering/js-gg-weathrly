@@ -1,5 +1,34 @@
 .current-weather {
-  float: left;
-  width: 25%;
-  height: 100vh;
+  width: 40%;
+  background: lightgrey;
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(lightblue, white);
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.current-weather li {
+  text-decoration: none;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.current-weather ul {
+  list-style: none;
+}
+
+.current-weather img {
+  width: 300px;
+  margin: 20px 0;
+}
+
+.current-weather .current-location {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.current-weather .current-summary {
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: left;
 }
