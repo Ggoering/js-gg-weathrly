@@ -1,4 +1,29 @@
+.day-card {
+  padding: 23px 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px lightgrey;
+  box-shadow: inset 0 0px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
 
-img {
-  width: 20px;
+/*p {
+  display: inline-block;
+}*/
+
+.day-card img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 33.333%;
+}
+
+.tab-btns {
+  border-bottom: solid 2px lightgrey;
+  padding-bottom: 5px;
+}
+
+.day-card-hi {
+  position: absolute;
+  left: 55%;
 }
