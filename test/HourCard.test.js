@@ -11,7 +11,6 @@ const hourlyData = {
 }
 
   const component = shallow(<HourCard temp={hourlyData.temp} hour={hourlyData.hour} condition={hourlyData.condition}/>);
-console.log(component.debug())
   const container = component.find('.hour-card')
   it('should render a  daily forecast card', () => {
 
