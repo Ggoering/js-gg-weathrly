@@ -8,14 +8,13 @@ describe('App Component', () => {
   const storageMock = () => {
   const storage = {};
     return {
-      lastLocation: '80204',
+      location: 'San Francisco, CA',
 
       clear() {
-        return this.lastLocation = '';
+        return this.location = '';
       },
       getItem(key) {
-        // return key in storage ? storage[key] : null;
-        return this.lastLocation
+        return key in storage ? storage[key] : null;
       },
       setItem: function(key, value) {
         storage[key] = value.toString();
@@ -25,7 +24,6 @@ describe('App Component', () => {
 
    window.localStorage = storageMock();
 
-   const component = mount(<App />);
 
   // it('should have a welcome screen', () => {
   //   const storageMock1 = () => {
@@ -40,9 +38,15 @@ describe('App Component', () => {
   //
   //    expect(component.contains(<div>Welcome Bruh</div>))
   // })
-  it('should show an error if the location does not exist', () => {
-    component.instance().handleSubmit('error')
-    console.log(component.debug())
-
+  it('should show a welcome screen if local storage is empty', () => {
+    // localStorage.clear()
+    const component = mount(<App />);
+    let welcomeText = component.find('.welcome-text')
+    expect(welcomeText.exists()).toEqual(true)
+  })
+  it('should mount', () => {
+    expect()
+    const component = mount(<App />);
+    console.log(component.debug());
   })
 })
