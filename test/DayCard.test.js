@@ -9,52 +9,38 @@ describe('DayCard', () => {
   //   getItem() {}
   // }
 
+  const weeklyData = {
+    dayName: 'Monday',
+    high: 100,
+    low: 2,
+    condition: 'hot'
+  }
+  const component = shallow(<DayCard
+            key='1'
+            high={weeklyData.high}
+            low={weeklyData.low}
+            dayName={weeklyData.dayName}
+            condition={weeklyData.condition}
+            />);
 
-  const weeklyData = [{
-    dayName: 'Fucksday',
-    high: 100,
-    low: 2,
-    condition: 'Fuckin hot'
-  },
-  {
-    dayName: 'Fucksday',
-    high: 100,
-    low: 2,
-    condition: 'Fuckin hot'
-  },
-  {
-    dayName: 'Fucksday',
-    high: 100,
-    low: 2,
-    condition: 'Fuckin hot'
-  },
-  {
-    dayName: 'Fucksday',
-    high: 100,
-    low: 2,
-    condition: 'Fuckin hot'
-  }];
-  const component = shallow(<DayCard weeklyData = { weeklyData } />);
 
-  var container = component.find('.container')
+
   it('should render a  dailyforecast card', () => {
-
-    expect(container.exists()).toEqual(true)
+    expect(component.exists()).toEqual(true)
   });
 
-  it('it should render 4 cards with class day-card', () => {
-    const component = shallow(<DayCard weeklyData = { weeklyData } />);
+  it('it should have a day name', () => {
+    expect(component.find('p').first().text())
+    .toEqual('Monday')
+  });
 
-    // expect(component.find('.day-card').length).toEqual(4);
-    expect(component.find('.day-card')).toHaveLength(4);
-  })
+  it('it should have a high', () => {
+    expect(component.find('.day-card-hi').text())
+    .toEqual('Hi: 100 ℉')
+  });
 
-  it('it should render 4 cards with class day-card', () => {
-    const component2 = shallow(<DayCard weeklyData = { weeklyData } />);
-
-    console.log(component2.debug());
-
-    // expect(component.find('.day-card').length).toEqual(4);
-    // expect(component.find('.day-card')).toHaveLength(4);
-  })
+  it('it should have a low', () => {
+    expect(component.find('p').last().text())
+    .toEqual('Lo: 2 ℉')
+  });
 })
