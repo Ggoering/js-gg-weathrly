@@ -1,15 +1,15 @@
 .card-container {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
+  flex-grow: 1;
   padding-top: 20px;
 }
 
 .container {
-  height: 100%;
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
 }
 
 .container a {
