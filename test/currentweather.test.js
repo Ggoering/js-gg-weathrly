@@ -10,14 +10,13 @@ describe('CURRENT WEATHER DISPLAY', () => {
     className = "current-weather" weatherData={scrubbedData.currentWeather} />)
 
   it('should render current day forecast details', () => {
-
     expect(component.contains(<ul>
     <li className="current-location">
     San Francisco, CA
     </li>
     <img src="Assets/sunny.svg" />
     <li className="current-Date">
-    6/6/2017
+    6/7/2017
     </li>
     <li>
     64.9

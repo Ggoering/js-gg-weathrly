@@ -7,7 +7,7 @@ import Container from '../lib/components/Container/Container.js';
 
 describe('Container in hour view', () => {
   const scrubbedData = scrubTestData(dummyData);
-  let tabView = 'Hourly View'
+  let tabView = 'Hourly View';
   const component = mount(<Container
     className="container"
     weeklyData={scrubbedData.tenDay}
