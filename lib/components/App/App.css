@@ -19,3 +19,22 @@
 .tab-btns a {
   margin-left: 10px;
 }
+
+.error-page {
+  text-align: center;
+  padding-top: 100px;
+  background: linear-gradient(lightblue, white);
+  height: 100vh;
+}
+
+.welcome-screen {
+  text-align: center;
+  padding-top: 100px;
+  background: linear-gradient(lightblue, white);
+  height: 100vh;
+}
+
+.welcome-screen h1 {
+  font-size: 100px;
+  margin-bottom: 40px;
+}
